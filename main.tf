@@ -8,8 +8,8 @@ terraform {
   backend "azurerm" {
     resource_group_name  = data.azurerm_resource_group.example.name
     storage_account_name = "rahulteststorageiamokay"
-    container_name       = "terraform.tfstate"
-    #key                  = "demo.terraform.tfstate"
+    container_name       = "tfstate"
+    key                  = "demo.terraform.tfstate"
     #key - (Required) The name of the Blob used to retrieve/store Terraform's State file inside the Storage Container
   }
 }
