@@ -6,7 +6,7 @@ provider "azurerm" {
 
 terraform {
   backend "azurerm" {
-    resource_group_name  = data.azurerm_resource_group.example.name
+    resource_group_name  = "PepsiCo-CTO-EDAP-rg"
     storage_account_name = "rahulteststorageiamokay"
     container_name       = "tfstate"
     key                  = "demo.terraform.tfstate"
