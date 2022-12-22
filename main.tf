@@ -7,7 +7,7 @@ provider "azurerm" {
 terraform {
   backend "azurerm" {
     resource_group_name  = "PepsiCo-CTO-EDAP-rg"
-    storage_account_name = "rahulteststorageiamokay"
+    storage_account_name = "demogaiastorageaccount"
     container_name       = "tfstate"
     key                  = "demo.terraform.tfstate"
     #key - (Required) The name of the Blob used to retrieve/store Terraform's State file inside the Storage Container
@@ -16,7 +16,7 @@ terraform {
 
 
 data "azurerm_resource_group" "example" {
-  name="PepsiCo-CTO-EDAP-rg"
+  name="aks-cluster"
 }
 
 resource "azurerm_app_service_plan" "example" {
